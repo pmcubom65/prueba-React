@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Data from '../data/sample.json';
 import {Card} from 'react-bootstrap'
 import ButtonToast from '../components/ButtonToast';
+import Listado from '../components/Listado';
 
 
 function Peliculas() {
@@ -32,33 +33,9 @@ function Peliculas() {
     <div>
         <h1>Peliculas</h1>
 
-<div class="cardClass">
-
-{movies.map(element => (
-
-<Card style={{ width: '18rem', height : '18rem' }}>
-    <Card.Img src={element.images["Poster Art"].url} variant="top" />
-    <Card.Body>
-        <Card.Text>
-            {element.title}
-        </Card.Text>
-        <ButtonToast info={element}/>
-
-    </Card.Body>
-</Card>
 
 
-))}
-
-
-
-
-
-
-
-</div>
-
-
+        <Listado lista={movies} />
         
     </div>
   )

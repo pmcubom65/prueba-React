@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Data from '../data/sample.json';
-import {Card} from 'react-bootstrap'
-import ButtonToast from '../components/ButtonToast';
+
+import Listado from '../components/Listado';
 
 function Series() {
 
@@ -37,24 +37,7 @@ function Series() {
         
         <h1>Series</h1>
         
-    <div class="cardClass">
-        {series.map(element => (
-
-<Card >
-    <Card.Img   src={element.images["Poster Art"].url} />
-    <Card.Body>
-        <Card.Text>
-            {element.title}
-        </Card.Text>
-        <ButtonToast info={element}/>
-
-    </Card.Body>
-</Card>
-
-
-))}
-
-</div>
+          <Listado lista={series} />
     </div>
 
   )
