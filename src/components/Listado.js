@@ -26,11 +26,13 @@ function Listado({lista}) {
 
     <select onChange={handleChange}>
 
+        <option value={0} selected="selected">Todos</option>
+
         {lista.map((item)=> (
             <option value={item.releaseYear} >{item.releaseYear}</option>
         ))}
 
-
+       
     </select>
 
 

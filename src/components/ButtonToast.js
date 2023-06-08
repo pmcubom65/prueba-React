@@ -10,8 +10,7 @@ function ButtonToast(props) {
   
     const toggleShowA = () => setShowA(!showA);
 
-    console.log(props)
-  
+     
     return (
       <Row>
         <Col md={6} className="mb-2">

@@ -15,7 +15,7 @@ function Header() {
     <div>
     <Container fluid style={{backgroundColor : '#40CFFF'}}>
       <Row  >
-        <Col md={4} style={{textAlign: 'left', marginLeft: '5rem'}}><h2>DEMO Streaming</h2></Col>
+        <Col md={4} style={{textAlign: 'left', marginLeft: '5rem'}}><h2><a href="/">DEMO Streaming</a></h2></Col>
        
         <Col  style={{textAlign: 'right'}}><a>Login</a></Col>
         <Col  style={{textAlign: 'right'}}><Button>Start your free trial</Button></Col>
