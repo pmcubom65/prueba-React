@@ -3,7 +3,7 @@ import {Card} from 'react-bootstrap'
 import ButtonToast from '../components/ButtonToast';
 import CustomCard from './CustomCard';
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -17,6 +17,10 @@ function Listado({lista}) {
         setYear(event.target.value)
     }
 
+    const years = [];
+    lista.map(item=> years.push(item.releaseYear))
+    const yearsNotDuplicated=[...new Set(years)]
+
 
   return (
 
@@ -28,8 +32,8 @@ function Listado({lista}) {
 
         <option value={0} selected="selected">Todos</option>
 
-        {lista.map((item)=> (
-            <option value={item.releaseYear} >{item.releaseYear}</option>
+        {yearsNotDuplicated.map((item)=> (
+            <option value={item} >{item}</option>
         ))}
 
        
@@ -40,8 +44,8 @@ function Listado({lista}) {
 
     {year==0 ?  lista.map(element => (
 
-<CustomCard style={{margin: '2rem'}}>
-<Card.Img   src={element.images["Poster Art"].url} />
+<CustomCard style={{margin: '2rem'}} >
+<Card.Img   src={element.images["Poster Art"].url}/>
 <Card.Body>
     <Card.Text>
         {element.title}
