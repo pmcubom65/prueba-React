@@ -7,8 +7,11 @@ import {Card} from 'react-bootstrap'
 function Inicio() {
     const navigate = useNavigate();
   return (
-    <div>
-        <h1>Popular Titles</h1>
+    <div className="inicio">
+   
+           
+    <div  className="cardClass">
+     
         
 
         <div className="cardClass">
@@ -16,9 +19,9 @@ function Inicio() {
         <Card >
 
     <Card.Body>
-        <Card.Text>
-        <a href="/series">Popular Series</a>
-        </Card.Text>
+        <Card.Title>
+        <a href="/series"><h1>Popular Series</h1></a>
+        </Card.Title>
 
     </Card.Body>
 </Card>
@@ -26,15 +29,15 @@ function Inicio() {
 <Card >
 
 <Card.Body>
-    <Card.Text>
-    <a href="/movies">Popular Movies</a>
-    </Card.Text>
+    <Card.Title>
+    <a href="/movies"><h1>Popular Movies</h1></a>
+    </Card.Title>
 
 </Card.Body>
 </Card>
 
         </div>
-
+        </div>
      
 
 
