@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Card} from 'react-bootstrap'
 import ButtonToast from '../components/ButtonToast';
+import CustomCard from './CustomCard';
 
 
 
@@ -41,7 +42,7 @@ function Listado({lista}) {
 
     {year==0 ?  lista.map(element => (
 
-<Card style={{margin: '2rem'}}>
+<CustomCard style={{margin: '2rem'}}>
 <Card.Img   src={element.images["Poster Art"].url} />
 <Card.Body>
     <Card.Text>
@@ -50,12 +51,12 @@ function Listado({lista}) {
     <ButtonToast info={element}/>
 
 </Card.Body>
-</Card>
+</CustomCard>
 
 
 )) : lista.filter(item=> item.releaseYear==year).map(element => (
 
-    <Card style={{margin: '2rem'}}>
+    <CustomCard style={{margin: '2rem'}}>
     <Card.Img   src={element.images["Poster Art"].url} />
     <Card.Body>
         <Card.Text>
@@ -64,7 +65,7 @@ function Listado({lista}) {
         <ButtonToast info={element}/>
     
     </Card.Body>
-    </Card>
+    </CustomCard>
     
     
     ))}

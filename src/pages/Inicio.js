@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { useNavigate } from 'react-router-dom';
+import CustomCard from '../components/CustomCard';
 
 import {Card} from 'react-bootstrap'
 
 function Inicio() {
-    const navigate = useNavigate();
+  
   return (
     <div className="inicio">
    
@@ -16,7 +16,7 @@ function Inicio() {
 
         <div className="cardClass">
 
-        <Card style={{margin: '2rem'}}>
+        <CustomCard>
 
     <Card.Body>
         <Card.Title>
@@ -24,9 +24,9 @@ function Inicio() {
         </Card.Title>
 
     </Card.Body>
-</Card>
+</CustomCard>
 
-<Card style={{margin: '2rem'}}>
+<CustomCard>
 
 <Card.Body>
     <Card.Title>
@@ -34,7 +34,7 @@ function Inicio() {
     </Card.Title>
 
 </Card.Body>
-</Card>
+</CustomCard>
 
         </div>
         </div>
