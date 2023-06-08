@@ -41,7 +41,7 @@ function Listado({lista}) {
 
     {year==0 ?  lista.map(element => (
 
-<Card >
+<Card style={{margin: '2rem'}}>
 <Card.Img   src={element.images["Poster Art"].url} />
 <Card.Body>
     <Card.Text>
@@ -55,7 +55,7 @@ function Listado({lista}) {
 
 )) : lista.filter(item=> item.releaseYear==year).map(element => (
 
-    <Card >
+    <Card style={{margin: '2rem'}}>
     <Card.Img   src={element.images["Poster Art"].url} />
     <Card.Body>
         <Card.Text>

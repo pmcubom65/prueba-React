@@ -16,7 +16,7 @@ function Inicio() {
 
         <div className="cardClass">
 
-        <Card >
+        <Card style={{margin: '2rem'}}>
 
     <Card.Body>
         <Card.Title>
@@ -26,7 +26,7 @@ function Inicio() {
     </Card.Body>
 </Card>
 
-<Card >
+<Card style={{margin: '2rem'}}>
 
 <Card.Body>
     <Card.Title>
