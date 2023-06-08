@@ -3,6 +3,7 @@ import Data from '../data/sample.json';
 import {Card} from 'react-bootstrap'
 import ButtonToast from '../components/ButtonToast';
 import Listado from '../components/Listado';
+import HeaderSecundario from '../components/HeaderSecundario';
 
 
 function Peliculas() {
@@ -31,10 +32,7 @@ function Peliculas() {
 
   return (
     <div>
-        <h1 style={{color : 'black'}}>Peliculas</h1>
-
-
-
+        <HeaderSecundario titulo={'Popular Movies'}/>
 
 
         <Listado lista={movies} />

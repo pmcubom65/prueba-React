@@ -22,7 +22,7 @@ function Listado({lista}) {
 
     <div>
 
-    <label style={{color : 'black'}}>Filtro por año:</label>
+    <label style={{color : 'black'}}><h1>Filtro por año:</h1></label>
 
     <select onChange={handleChange}>
 
@@ -34,11 +34,7 @@ function Listado({lista}) {
     </select>
 
 
-
-
-
-
-    <div class="cardClass">
+    <div className="cardClass">
 
     {year==0 ?  lista.map(element => (
 

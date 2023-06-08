@@ -1,13 +1,18 @@
 import React from 'react'
 
 import CustomCard from '../components/CustomCard';
+import HeaderSecundario from '../components/HeaderSecundario';
 
 import {Card} from 'react-bootstrap'
 
 function Inicio() {
   
   return (
+    <div>
+    <HeaderSecundario titulo={'Popular Titles'}/>
+   
     <div className="inicio">
+   
    
            
     <div  className="cardClass">
@@ -46,6 +51,7 @@ function Inicio() {
       
 
 
+    </div>
     </div>
   )
 }

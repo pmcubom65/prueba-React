@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Data from '../data/sample.json';
 
 import Listado from '../components/Listado';
+import HeaderSecundario from '../components/HeaderSecundario';
 
 function Series() {
 
@@ -34,8 +35,8 @@ function Series() {
 
 
     <div>
-        
-        <h1 style={{color : 'black'}}>Series</h1>
+        <HeaderSecundario titulo={'Popular Series'}/>
+
         
           <Listado lista={series} />
     </div>
