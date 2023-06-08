@@ -124,7 +124,7 @@ header {
 
 [type='radio']:checked ~ label {
   background: #ff6a95;
-  color: #fff;
+  color: black;
 }
 
 .input-group {

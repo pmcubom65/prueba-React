@@ -31,7 +31,9 @@ function Peliculas() {
 
   return (
     <div>
-        <h1>Peliculas</h1>
+        <h1 style={{color : 'black'}}>Peliculas</h1>
+
+
 
 
 

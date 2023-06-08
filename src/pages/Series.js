@@ -35,7 +35,7 @@ function Series() {
 
     <div>
         
-        <h1>Series</h1>
+        <h1 style={{color : 'black'}}>Series</h1>
         
           <Listado lista={series} />
     </div>
