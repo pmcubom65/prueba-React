@@ -4,11 +4,13 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useContext } from 'react';
 import { DataContext } from '../Context/DataContext';
+import { useNavigate } from 'react-router-dom';
 
 
-function CustomCard({children, inicio}) {
+function CustomCard({children, inicio, ruta}) {
 
     const [styleCard, setStyleCard]=useState({margin: '2rem', borderStyle: 'solid'})
+    const navigate=useNavigate();
 
     const handleHover= ()=> {
         setStyleCard({margin: '2rem', borderColor: 'white', opacity : '0.9'})
@@ -25,7 +27,16 @@ function CustomCard({children, inicio}) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => {
-      inicio ? setShow(false) : setShow(true);
+
+      if (inicio){
+
+        setShow(false);
+        navigate(ruta);
+
+      } else {
+        setShow(true);
+      }
+
     } 
 
     const modalStyle={
@@ -59,6 +70,10 @@ function CustomCard({children, inicio}) {
       </Modal>
     </div>
   )
+}
+
+CustomCard.defaultProps={
+  inicio: false, ruta : ''
 }
 
 export default CustomCard;

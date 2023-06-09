@@ -26,22 +26,22 @@ function Inicio() {
 
         <div className="cardClass">
 
-        <CustomCard inicio={true}>
+        <CustomCard inicio={true} ruta={"/series"}>
 
     <Card.Body>
         <Card.Title>
-        <a href="/series"><h1>Popular Series</h1></a>
+        <h1>Popular Series</h1>
         </Card.Title>
         <Card.Img   src={fallBackSrc} />
 
     </Card.Body>
 </CustomCard>
 
-<CustomCard  inicio={true}>
+<CustomCard  inicio={true} ruta={"/movies"}>
 
 <Card.Body>
     <Card.Title>
-    <a href="/movies"><h1>Popular Movies</h1></a>
+    <h1>Popular Movies</h1>
     </Card.Title>
     <Card.Img   src={fallBackSrc} />
 
