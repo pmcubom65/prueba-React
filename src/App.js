@@ -17,10 +17,12 @@ function App() {
 
   const [data, setData]=useState({});
 
+  const fallBackSrc='https://w7.pngwing.com/pngs/116/765/png-transparent-clapperboard-computer-icons-film-movie-poster-angle-text-logo-thumbnail.png'
+
 
   return (
     <div >
-    <DataContext.Provider value={{data, setData}}>
+    <DataContext.Provider value={{data, setData, fallBackSrc}}>
     <div className="App" >
       <Router>
         <Header />

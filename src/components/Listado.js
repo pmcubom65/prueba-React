@@ -12,7 +12,7 @@ function Listado({lista}) {
     const [year, setYear]=useState(0);
 
 
-    const {data, setData}=useContext(DataContext);
+    const {data, setData, fallBackSrc}=useContext(DataContext);
 
 
     const handleChange=(event)=> {
@@ -30,7 +30,7 @@ function Listado({lista}) {
     }
 
 
-  
+    
 
 
   return (
@@ -56,7 +56,7 @@ function Listado({lista}) {
     {year==0 ?  lista.map(element => (
 <div onClick={()=>clickCard(element)}>
 <CustomCard style={{margin: '2rem'}}  >
-<Card.Img   src={element.images["Poster Art"].url}/>
+<Card.Img   src={element.images["Poster Art"].url} onError={(e) => (e.currentTarget.src = fallBackSrc)}/>
 <Card.Body>
     <Card.Text>
         {element.title}
@@ -72,7 +72,7 @@ function Listado({lista}) {
 )) : lista.filter(item=> item.releaseYear==year).map(element => (
     <div onClick={()=>clickCard(element)}>
     <CustomCard style={{margin: '2rem'}} >
-    <Card.Img   src={element.images["Poster Art"].url} />
+    <Card.Img   src={element.images["Poster Art"].url} onError={(e) => (e.currentTarget.src = fallBackSrc)}/>
     <Card.Body>
         <Card.Text>
             {element.title}
