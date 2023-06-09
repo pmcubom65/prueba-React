@@ -12,7 +12,7 @@ function Inicio() {
     <HeaderSecundario titulo={'Popular Titles'}/>
    
     <div className="inicio">
-   
+  
    
            
     <div  className="cardClass">
@@ -21,7 +21,7 @@ function Inicio() {
 
         <div className="cardClass">
 
-        <CustomCard>
+        <CustomCard inicio={true}>
 
     <Card.Body>
         <Card.Title>
@@ -31,7 +31,7 @@ function Inicio() {
     </Card.Body>
 </CustomCard>
 
-<CustomCard>
+<CustomCard  inicio={true}>
 
 <Card.Body>
     <Card.Title>

@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { DataContext } from '../Context/DataContext';
 
 
-function CustomCard({children}) {
+function CustomCard({children, inicio}) {
 
     const [styleCard, setStyleCard]=useState({margin: '2rem', borderStyle: 'solid'})
 
@@ -14,7 +14,7 @@ function CustomCard({children}) {
         setStyleCard({margin: '2rem', borderColor: 'white', opacity : '0.9'})
     }
 
-
+   
     const handleLeave= ()=> {
         setStyleCard({margin: '2rem', borderStyle: 'solid'})
     }
@@ -24,7 +24,9 @@ function CustomCard({children}) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+      inicio ? setShow(false) : setShow(true);
+    } 
 
     const modalStyle={
       position: 'absolute',
