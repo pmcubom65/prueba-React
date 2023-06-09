@@ -1,17 +1,19 @@
 import React, {useState} from 'react'
 import {Card} from 'react-bootstrap'
-import ButtonToast from '../components/ButtonToast';
+
 import CustomCard from './CustomCard';
-
-import { v4 as uuidv4 } from 'uuid';
-
-
+import { useContext } from 'react';
+import { DataContext } from '../Context/DataContext';
 
 
 
 function Listado({lista}) {
 
     const [year, setYear]=useState(0);
+
+
+    const {data, setData}=useContext(DataContext);
+
 
     const handleChange=(event)=> {
         setYear(event.target.value)
@@ -20,6 +22,15 @@ function Listado({lista}) {
     const years = [];
     lista.map(item=> years.push(item.releaseYear))
     const yearsNotDuplicated=[...new Set(years)]
+
+
+    const clickCard=(item)=> {
+        console.log('clickcardcontext'+item)
+        setData(item)
+    }
+
+
+  
 
 
   return (
@@ -43,31 +54,33 @@ function Listado({lista}) {
     <div className="cardClass">
 
     {year==0 ?  lista.map(element => (
-
-<CustomCard style={{margin: '2rem'}} >
+<div onClick={()=>clickCard(element)}>
+<CustomCard style={{margin: '2rem'}}  >
 <Card.Img   src={element.images["Poster Art"].url}/>
 <Card.Body>
     <Card.Text>
         {element.title}
     </Card.Text>
-    <ButtonToast info={element}/>
+
+
 
 </Card.Body>
 </CustomCard>
+</div>
 
 
 )) : lista.filter(item=> item.releaseYear==year).map(element => (
-
-    <CustomCard style={{margin: '2rem'}}>
+    <div onClick={()=>clickCard(element)}>
+    <CustomCard style={{margin: '2rem'}} >
     <Card.Img   src={element.images["Poster Art"].url} />
     <Card.Body>
         <Card.Text>
             {element.title}
         </Card.Text>
-        <ButtonToast info={element}/>
     
     </Card.Body>
     </CustomCard>
+    </div>
     
     
     ))}
@@ -77,4 +90,4 @@ function Listado({lista}) {
   )
 }
 
-export default Listado
+export default Listado;

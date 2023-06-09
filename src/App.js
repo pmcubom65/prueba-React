@@ -6,15 +6,22 @@ import Series from './pages/Series';
 import Peliculas from './pages/Peliculas';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { DataContext } from './Context/DataContext';
+import { useState } from 'react';
 
 
 
 
 
 function App() {
+
+  const [data, setData]=useState({});
+
+
   return (
     <div >
-    <div className="App" style={{height: '100%'}}>
+    <DataContext.Provider value={{data, setData}}>
+    <div className="App" >
       <Router>
         <Header />
       <Routes>
@@ -31,6 +38,7 @@ function App() {
       
     </div>
     <Footer />
+    </DataContext.Provider>
     </div>
   );
 }

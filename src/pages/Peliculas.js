@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Data from '../data/sample.json';
 import {Card} from 'react-bootstrap'
-import ButtonToast from '../components/ButtonToast';
+
 import Listado from '../components/Listado';
 import HeaderSecundario from '../components/HeaderSecundario';
 
