@@ -24,12 +24,12 @@ function App() {
     <div >
     <DataContext.Provider value={{data, setData, fallBackSrc}}>
     <div className="App" >
-      <Router>
+      <Router  basename='https://pmcubom65.github.io/prueba-React/'>
         <Header />
       <Routes>
-        <Route path='https://pmcubom65.github.io/prueba-React' element={<Inicio />} />
-        <Route path='https://pmcubom65.github.io/series' element={<Series />} />
-        <Route path='https://pmcubom65.github.io/movies' element={<Peliculas />} />
+        <Route path='/' element={<Inicio />} />
+        <Route path='/series' element={<Series />} />
+        <Route path='/movies' element={<Peliculas />} />
 
 
 
