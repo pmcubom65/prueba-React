@@ -14,7 +14,7 @@ function CustomCard({children, inicio, ruta}) {
     const navigate=useNavigate();
 
     const handleHover= ()=> {
-        setStyleCard({margin: '2rem', borderColor: 'white', opacity : '0.9'})
+        setStyleCard({margin: '2rem', borderColor: 'white', opacity : '0.1'})
     }
 
    
@@ -45,7 +45,6 @@ function CustomCard({children, inicio, ruta}) {
       backgroundColor : 'darkblue',
       padding: '5rem',
       top: '50%',
-     
       opacity: '1'
    }
 

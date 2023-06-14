@@ -7,6 +7,7 @@ import {Card} from 'react-bootstrap';
 
 import { useContext } from 'react';
 import { DataContext } from '../Context/DataContext';
+import CustomImagen from '../components/CustomImagen';
 
 function Inicio() {
 
@@ -32,7 +33,7 @@ function Inicio() {
         <Card.Title>
         <h1>Popular Series</h1>
         </Card.Title>
-        <Card.Img   src={fallBackSrc} />
+        <CustomImagen fallBackSrc={fallBackSrc} />
 
     </Card.Body>
 </CustomCard>
@@ -43,7 +44,7 @@ function Inicio() {
     <Card.Title>
     <h1>Popular Movies</h1>
     </Card.Title>
-    <Card.Img   src={fallBackSrc} />
+    <CustomImagen fallBackSrc={fallBackSrc} />
 
 </Card.Body>
 </CustomCard>

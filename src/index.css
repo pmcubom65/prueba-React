@@ -25,7 +25,11 @@ ul {
 .inicio {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20rem;
 }
+
+
 
 
 .headerbrand {
@@ -61,6 +65,11 @@ select {
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
+
+.loading{
+  background:transparent url('../public/loading.gif') center center no-repeat;
+}
+
 
 .card {
   background-color: #fff;

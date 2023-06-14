@@ -8,9 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { DataContext } from './Context/DataContext';
 import { useState } from 'react';
-
-
-
+import ProviderComponent from './components/ProviderComponent';
 
 
 function App() {
@@ -23,6 +21,7 @@ function App() {
   return (
     <div >
     <DataContext.Provider value={{data, setData, fallBackSrc}}>
+    <ProviderComponent>
     <div className="App" >
       <Router  basename={'/prueba-React'}>
         <Header />
@@ -30,16 +29,13 @@ function App() {
         <Route path='/' element={<Inicio />} />
         <Route path='/series' element={<Series />} />
         <Route path='/movies' element={<Peliculas />} />
-
-
-
-
       </Routes>
       </Router>
 
       
     </div>
     <Footer />
+    </ProviderComponent>
     </DataContext.Provider>
     </div>
   );

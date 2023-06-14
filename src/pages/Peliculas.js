@@ -1,44 +1,21 @@
-import React, {useState} from 'react'
-import Data from '../data/sample.json';
-import {Card} from 'react-bootstrap'
-
-import Listado from '../components/Listado';
-import HeaderSecundario from '../components/HeaderSecundario';
+import React, {useEffect} from 'react'
+import ModeloComponent from '../components/ModeloComponent';
+import { useDispatch } from 'react-redux';
+import { changeYear, changeNumero } from '../store/ListadoSlice';
 
 
 function Peliculas() {
 
-    const compare = ( a, b ) => {
-        if ( a.title < b.title ){
-          return -1;
-        }
-        if ( a.title > b.title ){
-          return 1;
-        }
-        return 0;
-      }
+  const dispatch=useDispatch();
 
-    const [movies, setMovies]=useState(Data.entries.filter(element=>element.programType=='movie' && 
-    element.releaseYear>=2010).sort(compare).slice(0, 20))
+  useEffect(()=> {
+    dispatch(changeYear(0));
+    dispatch(changeNumero(20));
+  },[])
 
 
-    if (movies.length===0) {
-        return <h1>Loading....</h1>
-    } else if (typeof movies === 'undefined'){
-        return <h1>Something went wrong....</h1>
-    }
-
-
-
-  return (
-    <div>
-        <HeaderSecundario titulo={'Popular Movies'}/>
-
-
-        <Listado lista={movies} />
-        
-    </div>
-  )
+  return <ModeloComponent modelo={'movie'} titulo={'Popular movies'} />
+ 
 }
 
 export default Peliculas;
