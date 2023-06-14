@@ -21,10 +21,10 @@ function Footer() {
         <Col lg={1} style={{ marginLeft: '5rem'}}>
 
             
-            <img src="/social/facebook-white.svg" style={{width: '2rem', height: '2.5rem', margin:'1rem', float: 'left'}}/>
-            <img src="/social/twitter-white.svg" style={{width: '3rem', height: 'auto', margin:'1rem', float: 'left'}}  />
-            <img src="/social/instagram-white.svg"  style={{width: '3rem', height: 'auto', margin:'1rem', float: 'left'}} />
-            <img src="/store/app-store.svg" style={{width: '5rem', height: 'auto', margin:'1rem', float: 'right'}}/>
+            <img src="social/facebook-white.svg" style={{width: '2rem', height: '2.5rem', margin:'1rem', float: 'left'}}/>
+            <img src="social/twitter-white.svg" style={{width: '3rem', height: 'auto', margin:'1rem', float: 'left'}}  />
+            <img src="social/instagram-white.svg"  style={{width: '3rem', height: 'auto', margin:'1rem', float: 'left'}} />
+            <img src="store/app-store.svg" style={{width: '5rem', height: 'auto', margin:'1rem', float: 'right'}}/>
             <img src="store/play-store.svg" style={{width: '5rem', height: 'auto', margin:'1rem', float: 'right'}}  />
             <img src="store/windows-store.svg"  style={{width: '5rem', height: 'auto', margin:'1rem', float: 'right'}} />
 
