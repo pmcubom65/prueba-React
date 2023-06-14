@@ -27,9 +27,9 @@ function App() {
       <Router>
         <Header />
       <Routes>
-        <Route path='/' element={<Inicio />} />
-        <Route path='/series' element={<Series />} />
-        <Route path='/movies' element={<Peliculas />} />
+        <Route path='https://pmcubom65.github.io/' element={<Inicio />} />
+        <Route path='https://pmcubom65.github.io/series' element={<Series />} />
+        <Route path='https://pmcubom65.github.io/movies' element={<Peliculas />} />
 
 
 
