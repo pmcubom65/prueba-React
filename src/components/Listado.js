@@ -4,6 +4,7 @@ import {Card} from 'react-bootstrap'
 import CustomCard from './CustomCard';
 import { useContext } from 'react';
 import { DataContext } from '../Context/DataContext';
+import CustomImagen from './CustomImagen';
 
 
 
@@ -56,7 +57,8 @@ function Listado({lista}) {
     {year==0 ?  lista.map(element => (
 <div onClick={()=>clickCard(element)}>
 <CustomCard style={{margin: '2rem'}}  >
-<Card.Img   src={element.images["Poster Art"].url} onError={(e) => (e.currentTarget.src = fallBackSrc)}/>
+
+<CustomImagen element={element} fallBackSrc={fallBackSrc} />
 <Card.Body>
     <Card.Text>
         {element.title}
@@ -72,7 +74,7 @@ function Listado({lista}) {
 )) : lista.filter(item=> item.releaseYear==year).map(element => (
     <div onClick={()=>clickCard(element)}>
     <CustomCard style={{margin: '2rem'}} >
-    <Card.Img   src={element.images["Poster Art"].url} onError={(e) => (e.currentTarget.src = fallBackSrc)}/>
+    <CustomImagen element={element} fallBackSrc={fallBackSrc} />
     <Card.Body>
         <Card.Text>
             {element.title}

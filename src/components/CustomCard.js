@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import { useContext } from 'react';
 import { DataContext } from '../Context/DataContext';
 import { useNavigate } from 'react-router-dom';
+import CustomImagen from './CustomImagen';
 
 
 function CustomCard({children, inicio, ruta}) {
@@ -21,7 +22,7 @@ function CustomCard({children, inicio, ruta}) {
         setStyleCard({margin: '2rem', borderStyle: 'solid'})
     }
 
-    const {data, setData}=useContext(DataContext);
+    const {data, setData, fallBackSrc}=useContext(DataContext);
 
     const [show, setShow] = useState(false);
 
@@ -49,8 +50,6 @@ function CustomCard({children, inicio, ruta}) {
    }
 
 
-
-
   return (
     <div>
     <Card style={styleCard} onMouseOver={handleHover} onMouseLeave={handleLeave} onClick={handleShow}>
@@ -61,9 +60,13 @@ function CustomCard({children, inicio, ruta}) {
           <Modal.Title>{data.title}</Modal.Title>
           <Modal.Title>{data.releaseYear}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{data.description}</Modal.Body>
-        <Modal.Footer>
-          <Button   variant="primary" size="lg" onClick={handleClose}>
+        <Modal.Body style={{display: 'flex'}}>
+          <CustomImagen element={data} fallBackSrc={fallBackSrc} />
+          
+          
+          <div className='bodyModal'>{data.description}</div></Modal.Body>
+        <Modal.Footer className='footerModal'>
+          <Button variant="primary" size="lg" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>
