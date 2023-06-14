@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 
 function Header() {
 
-  const baseRoute='https://pmcubom65.github.io/prueba-React/';
+  const baseRoute='https://pmcubom65.github.io/prueba-React';
 
 
   return (
