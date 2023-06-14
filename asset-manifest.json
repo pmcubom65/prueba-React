@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/github.io/prueba-react/static/css/main.76f55fa4.css",
-    "main.js": "/github.io/prueba-react/static/js/main.427bf36a.js",
-    "static/js/787.d85b9250.chunk.js": "/github.io/prueba-react/static/js/787.d85b9250.chunk.js",
-    "static/media/logo.svg": "/github.io/prueba-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/github.io/prueba-react/index.html",
-    "main.76f55fa4.css.map": "/github.io/prueba-react/static/css/main.76f55fa4.css.map",
-    "main.427bf36a.js.map": "/github.io/prueba-react/static/js/main.427bf36a.js.map",
-    "787.d85b9250.chunk.js.map": "/github.io/prueba-react/static/js/787.d85b9250.chunk.js.map"
+    "main.css": "/github.io/prueba-React/static/css/main.76f55fa4.css",
+    "main.js": "/github.io/prueba-React/static/js/main.90877df4.js",
+    "static/js/787.d85b9250.chunk.js": "/github.io/prueba-React/static/js/787.d85b9250.chunk.js",
+    "static/media/logo.svg": "/github.io/prueba-React/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/github.io/prueba-React/index.html",
+    "main.76f55fa4.css.map": "/github.io/prueba-React/static/css/main.76f55fa4.css.map",
+    "main.90877df4.js.map": "/github.io/prueba-React/static/js/main.90877df4.js.map",
+    "787.d85b9250.chunk.js.map": "/github.io/prueba-React/static/js/787.d85b9250.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76f55fa4.css",
-    "static/js/main.427bf36a.js"
+    "static/js/main.90877df4.js"
   ]
 }
