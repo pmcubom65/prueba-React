@@ -3,13 +3,15 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 
 function Header() {
 
   const baseRoute='https://pmcubom65.github.io/prueba-React';
 
+  const navigate=useNavigate();
 
   return (
     <div>
@@ -18,9 +20,9 @@ function Header() {
           <Col md={4} style={{ textAlign: 'left', marginLeft: '5rem' }}>
             <h2><a href={baseRoute}>DEMO Streaming</a></h2>
 
-            <a style={{ float: 'right', marginRight: '2rem' }} href={`${baseRoute}/movies`}>Movies</a>
+            <Button   variant="primary" size="lg" style={{ float: 'right', marginRight: '2rem' }} onClick={()=>navigate('/movies')}>Movies</Button>
 
-            <a style={{ float: 'right', marginRight: '2rem'  }}  href={`${baseRoute}/series`}>Series</a>
+            <Button   variant="primary" size="lg" style={{ float: 'right', marginRight: '2rem'  }} onClick={()=>navigate('/series')}>Series</Button>
           </Col>
 
         </Row>
