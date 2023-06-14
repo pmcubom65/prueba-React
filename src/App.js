@@ -27,7 +27,7 @@ function App() {
       <Router>
         <Header />
       <Routes>
-        <Route path='https://pmcubom65.github.io/' element={<Inicio />} />
+        <Route path='https://pmcubom65.github.io/prueba-React' element={<Inicio />} />
         <Route path='https://pmcubom65.github.io/series' element={<Series />} />
         <Route path='https://pmcubom65.github.io/movies' element={<Peliculas />} />
 
