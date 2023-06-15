@@ -5,7 +5,8 @@ const initialState = {
     year : 0,
     total : 0,
     inicio: 0,
-    fin: 20
+    fin: 20,
+    paginaActiva: 1
 }
 
 const ListadoSlice=createSlice({
@@ -26,9 +27,12 @@ const ListadoSlice=createSlice({
         },
         changeFin(state, action){
             state.fin=action.payload==1 ? state.elementosAMostrar : state.elementosAMostrar*action.payload
+        },
+        changePaginaActiva(state,action){
+            state.paginaActiva=action.payload;
         }
     }
 });
 
-export const {changeYear, changeNumero, changeTotal, changeInicio, changeFin}=ListadoSlice.actions;
+export const {changeYear, changeNumero, changeTotal, changeInicio, changeFin, changePaginaActiva}=ListadoSlice.actions;
 export default ListadoSlice.reducer;
