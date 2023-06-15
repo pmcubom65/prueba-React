@@ -11,22 +11,20 @@ function DesplegablesFiltro({nombreDesplegable, lista, titulo, listaGlobal}) {
 
     const handleChange=(event)=> {
 
+        dispatch(changeInicio(1))
+        dispatch(changeFin(1));
+        dispatch(changePaginaActiva(1));
+
         if (nombreDesplegable==='year'){
             dispatch(changeYear(event.target.value));
-
             if (event.target.value==0){
                 dispatch(changeTotal(listaGlobal.length))
             } else {
                 dispatch(changeTotal(listaGlobal.filter(item=> item.releaseYear==event.target.value).length))
             }
 
-
-     
         } else {
             dispatch(changeNumero(event.target.value));
-            dispatch(changeInicio(1))
-            dispatch(changeFin(1));
-            dispatch(changePaginaActiva(1));
         }
       
      }
