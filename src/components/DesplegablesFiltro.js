@@ -12,7 +12,6 @@ function DesplegablesFiltro({nombreDesplegable, lista, titulo, listaGlobal}) {
     const handleChange=(event)=> {
 
         dispatch(changeInicio(1))
-        dispatch(changeFin(1));
         dispatch(changePaginaActiva(1));
 
         if (nombreDesplegable==='year'){
@@ -22,9 +21,10 @@ function DesplegablesFiltro({nombreDesplegable, lista, titulo, listaGlobal}) {
             } else {
                 dispatch(changeTotal(listaGlobal.filter(item=> item.releaseYear==event.target.value).length))
             }
-
+            dispatch(changeFin(1))
         } else {
             dispatch(changeNumero(event.target.value));
+            dispatch(changeFin(1))
         }
       
      }
