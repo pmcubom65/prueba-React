@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 import {Card} from 'react-bootstrap'
 import CustomCard from './CustomCard';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { DataContext } from '../Context/DataContext';
 import CustomImagen from './CustomImagen';
 import DesplegablesFiltro from './DesplegablesFiltro';
 import { useSelector } from 'react-redux';
+import PaginationComponent from './PaginationComponent';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -13,6 +15,7 @@ function Listado({lista}) {
 
     const {data, setData, fallBackSrc}=useContext(DataContext);
 
+    const dispatch=useDispatch();
 
     const years=[0];
     lista.map(item=> years.push(item.releaseYear))
@@ -20,6 +23,7 @@ function Listado({lista}) {
     const yearsNotDuplicated=[...new Set(years)]
 
     const listadoFilter=useSelector(state=>state.listado)
+
 
     const clickCard=(item)=> {
         setData(item)
@@ -31,13 +35,18 @@ function Listado({lista}) {
     <div>
 
     <div className='inicio'>
-    <DesplegablesFiltro nombreDesplegable={'year'} lista={yearsNotDuplicated} titulo={'Filtro por año:'} />
+    <DesplegablesFiltro nombreDesplegable={'year'} lista={yearsNotDuplicated} titulo={'Filtro por año:'} listaGlobal={lista}/>
 
-    <DesplegablesFiltro nombreDesplegable={'numero'} lista={[5,10,20]} titulo={'Elementos a mostrar:'} />
+    <DesplegablesFiltro nombreDesplegable={'numero'} lista={[5,10,20]} titulo={'Elementos por página:'} listaGlobal={lista}/>
     </div>
+
+    {listadoFilter.total > listadoFilter.elementosAMostrar && <PaginationComponent />}
+
     <div className="cardClass">
 
-    {listadoFilter.year==0 ?  lista.slice(0, listadoFilter.elementosAMostrar).map((element,index) => (
+    
+
+    {listadoFilter.year==0 ?  lista.slice(listadoFilter.inicio, listadoFilter.fin).map((element,index) => (
 <div onClick={()=>clickCard(element)} key={index}>
 <CustomCard style={{margin: '2rem'}}  >
 
@@ -54,7 +63,7 @@ function Listado({lista}) {
 </div>
 
 
-)) : lista.filter(item=> item.releaseYear==listadoFilter.year).slice(0, listadoFilter.elementosAMostrar).map((element,index) => (
+)) : lista.filter(item=> item.releaseYear==listadoFilter.year).slice(listadoFilter.inicio, listadoFilter.fin).map((element,index) => (
     <div onClick={()=>clickCard(element)} key={index}>
     <CustomCard style={{margin: '2rem'}} >
     <CustomImagen element={element} fallBackSrc={fallBackSrc} />

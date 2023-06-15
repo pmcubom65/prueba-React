@@ -81,20 +81,9 @@ select {
   width: 20rem;
 }
 
-.card.reverse {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-}
 
-.card h2 {
-  font-size: 22px;
-  font-weight: 600;
-  text-align: center;
-}
 
-.title {
-  justify-content: center;
-}
+
 
 
 
@@ -112,91 +101,22 @@ select {
   
 }
 
-.rating li,
-.num-display {
-  position: relative;
-  background: #f4f4f4;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 19px;
-  border: 1px #eee solid;
-  transition: 0.3s;
-}
 
-.rating li label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
 
-.rating li:hover,
-.num-display {
-  background: #ff6a95;
-  color: #fff;
-}
-
-[type='radio'] {
-  opacity: 0;
-}
-
-[type='radio']:checked ~ label {
-  background: #ff6a95;
-  color: black;
-}
-
-.input-group {
+.pagination {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: row;
-  border: 1px solid #ccc;
-  padding: 8px 10px;
-  border-radius: 8px;
-}
-
-input {
-  flex-grow: 2;
-  border: none;
-  font-size: 16px;
-}
-
-input:focus {
-  outline: none;
-}
-
-.feedback-stats {
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   align-items: center;
+  color: rebeccapurple;
+  justify-content: center;
 }
 
-.num-display {
-  position: absolute;
-  top: -10px;
-  left: -10px;
+.pagination li {
+  list-style-type: none;
 }
 
-.close,
-.edit {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
 
-.edit {
-  right: 40px;
-}
 
 .btn {
   color: #fff;
@@ -212,9 +132,7 @@ input:focus {
   background-color: #202142;
 }
 
-.btn-secondary {
-  background: #ff6a95;
-}
+
 
 .btn:hover {
   transform: scale(0.98);
@@ -232,18 +150,7 @@ input:focus {
   opacity: 1;
 }
 
-.message {
-  padding-top: 10px;
-  text-align: center;
-  color: rebeccapurple;
-}
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
-.about-link {
-  display: flex;
-  justify-content: flex-end;
-}
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */

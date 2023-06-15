@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { changeYear, changeNumero } from '../store/ListadoSlice';
+import { changeYear, changeNumero, changeTotal } from '../store/ListadoSlice';
 
-function DesplegablesFiltro({nombreDesplegable, lista, titulo}) {
+function DesplegablesFiltro({nombreDesplegable, lista, titulo, listaGlobal}) {
 
 
     const dispatch=useDispatch();
@@ -13,6 +13,15 @@ function DesplegablesFiltro({nombreDesplegable, lista, titulo}) {
 
         if (nombreDesplegable==='year'){
             dispatch(changeYear(event.target.value));
+
+            if (event.target.value==0){
+                dispatch(changeTotal(listaGlobal.length))
+            } else {
+                dispatch(changeTotal(listaGlobal.filter(item=> item.releaseYear==event.target.value).length))
+            }
+
+
+     
         } else {
             dispatch(changeNumero(event.target.value));
         }
